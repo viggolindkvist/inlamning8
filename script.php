@@ -32,7 +32,8 @@
         <input type="text" name="comment" id="comment">
         <br>
         <br>
-        <input type="submit" value="Lägg till" id="submit">
+        <input type="submit" value="Lägg till" id="submit">            header("location:fileUpload.php?uploadsuccess"); 
+
     </form>
     <?php
 
@@ -53,14 +54,12 @@
     $comment = $_POST["comment"];
     $timestamp = date("Y-m-d H:i:s");
     $sql = $stmt->execute();
+    header("location:posts.php"); 
+
 
     $stmt->close();
     $conn->close();
-
-
-
-
-
+    
     ?>
 </body>
 
